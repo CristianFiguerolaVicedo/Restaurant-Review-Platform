@@ -140,14 +140,14 @@ public class ReviewServiceImpl implements ReviewService {
                             .uploadDate(LocalDateTime.now())
                             .build()).toList());
 
-        updateRestaurantAverageRating(restaurant);
-
         List<Review> updatedReviews = restaurant.getReviews().stream()
                 .filter(r -> !reviewId.equals(r.getId()))
                 .collect(Collectors.toList());
         updatedReviews.add(existingReview);
 
         restaurant.setReviews(updatedReviews);
+
+        updateRestaurantAverageRating(restaurant);
 
         restaurantRepository.save(restaurant);
 
