@@ -27,7 +27,7 @@ public class PhotoController {
         return photoMapper.toDto(savedPhoto);
     }
 
-    @GetMapping(path = "/{id}:.+")
+    @GetMapping(path = "/{id:.+}")
     public ResponseEntity<Resource> getPhoto(@PathVariable String id) {
         return photoService.getPhotoAsResource(id).map(photo ->
                 ResponseEntity.ok()
