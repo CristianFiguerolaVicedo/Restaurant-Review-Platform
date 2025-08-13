@@ -22,7 +22,7 @@ public class User {
     private String username;
 
     @Field(type = FieldType.Text)
-    private String givingName;
+    private String givenName;
 
     @Field(type = FieldType.Text)
     private String familyName;
