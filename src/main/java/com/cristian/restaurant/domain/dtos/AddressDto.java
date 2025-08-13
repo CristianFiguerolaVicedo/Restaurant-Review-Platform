@@ -5,12 +5,13 @@ import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 
 @Data
 @AllArgsConstructor
-@NotBlank
+@NoArgsConstructor
 @Builder
 public class AddressDto {
 
